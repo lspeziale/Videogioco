@@ -9,6 +9,7 @@ public class Goku extends AzioniComuni implements Base {
 	int hpInizio;
 	int danno = 50;
 
+<<<<<<< HEAD
 	public Goku(int liv, int hp) {
 		this.hp = hp;
 		this.liv = liv;
@@ -20,6 +21,11 @@ public class Goku extends AzioniComuni implements Base {
 		int dannoPugno = danno * liv;
 		return dannoPugno;
 
+=======
+	@Override
+	public void pugno() {
+				//Bella per te!
+>>>>>>> branch 'master' of https://github.com/lspeziale/Videogioco.git
 	}
 
 	@Override
@@ -31,8 +37,13 @@ public class Goku extends AzioniComuni implements Base {
 
 	@Override
 	public void attaccoSpeciale() {
+<<<<<<< HEAD
 		// TODO Auto-generated method stub
 
+=======
+	
+		
+>>>>>>> branch 'master' of https://github.com/lspeziale/Videogioco.git
 	}
 
 	@Override
