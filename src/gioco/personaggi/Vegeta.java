@@ -4,23 +4,34 @@ import gioco.astratte.AzioniComuni;
 import gioco.interfacce.Base;
 
 public class Vegeta extends AzioniComuni implements Base{
-
+	int liv;
+	int hp;
+	int hpInizio;
+	int danno = 50;
+	
 	@Override
-	public void pugno() {
-		System.out.println("Sto dando un pugno");
-		
+	public int pugno() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
-	public void calcio() {
-		System.out.println("Sto calciando");
+	public int calcio() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void dannoRicevuto(int a) {
+		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void attaccoSpeciale() {
-		
+		// TODO Auto-generated method stub
 		
 	}
 
+	
 }
