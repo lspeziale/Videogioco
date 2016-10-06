@@ -1,6 +1,6 @@
 package gioco.astratte;
 
-public class AzioniComuni {
+public abstract class AzioniComuni {
 	public void avanti() {
 		System.out.println("avanti");
 	}
@@ -24,4 +24,6 @@ public class AzioniComuni {
 	public void corri() {
 		System.out.println("corri");
 	}
+	
+	public abstract void attaccoSpeciale();
 }
