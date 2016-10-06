@@ -8,7 +8,7 @@ public class Goku extends AzioniComuni implements Base{
 	@Override
 	public void pugno() {
 		// TODO Auto-generated method stub
-		
+		//Bella per te!
 	}
 
 	@Override
