@@ -21,7 +21,4 @@ public class AzioniComuni {
 		System.out.println("salta");
 	}
 
-	public void corri() {
-		System.out.println("corri");
-	}
 }
