@@ -3,7 +3,8 @@ package gioco.personaggi;
 import gioco.astratte.AzioniComuni;
 import gioco.interfacce.Base;
 
-public class Goku extends AzioniComuni implements Base{
+
+public class Goku extends AzioniComuni implements Base {
 
 	@Override
 	public void pugno() {

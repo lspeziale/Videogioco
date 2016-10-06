@@ -21,9 +21,6 @@ public abstract class AzioniComuni {
 		System.out.println("salta");
 	}
 
-	public void corri() {
-		System.out.println("corri");
-	}
 	
 	public abstract void attaccoSpeciale();
 }
