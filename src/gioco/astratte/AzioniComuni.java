@@ -22,5 +22,5 @@ public abstract class AzioniComuni {
 	}
 
 	
-	public abstract void attaccoSpeciale();
+	public abstract int attaccoSpeciale();
 }

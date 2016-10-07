@@ -4,47 +4,69 @@ import gioco.astratte.AzioniComuni;
 import gioco.interfacce.Base;
 
 public class Goku extends AzioniComuni implements Base {
-	int liv;
-	int hp;
-	int hpInizio;
-	int danno = 50;
+	private int liv;
+	private int hp;
+	private int hpInizio;
+	private int danno = 50;
+	private int energia = 0;
+	private boolean mossaSpeciale;
+	private String nome;
 
-
-	public Goku(int liv, int hp) {
-		this.hp = hp;
+	public Goku(int liv, int hp, String nome) {
+		this.setHp(hp);
 		this.liv = liv;
-		this.hpInizio= hp;
+		this.hpInizio = hp;
+		this.nome = nome;
 	}
 
 	public int pugno() {
-		System.out.println("Sto pugnando");
+		System.out.println(nome + " Sta tirando un pugno ");
 		int dannoPugno = danno * liv;
+		energia += 5;
 		return dannoPugno;
 	}
-
 
 	@Override
 	public int calcio() {
-		System.out.println("Sto calciando");
+		System.out.println(nome+ " Sta calciando ");
 		int dannoPugno = (int) (danno * liv * 1.2);
+		energia += 5;
+		if (energia == 15) {
+			mossaSpeciale = true;
+		}
 		return dannoPugno;
 	}
 
 	@Override
-	public void attaccoSpeciale() {
-
+	public int attaccoSpeciale() {
+		if( mossaSpeciale == true){
+			danno = danno * 2;
+		}
+		System.out.println("Attacco speciale");
+		return danno;
 		
 
 	}
 
 	@Override
 	public void dannoRicevuto(int attacco) {
-		hp = hp - attacco;
-		if (hp <= 0) {
-			System.out.print("MORTO");
+		setHp(getHp() - attacco);
+		if (getHp() <= 0) {
+			System.out.print(" Morto ");
 		} else {
-			System.out.print("PUNTI VITA" + hp);}
-        
+			System.out.print("I punti vita di "+ nome + " = " + getHp() + ";  ");
+		}
+
 	}
+
+	public int getHp() {
+		return hp;
+	}
+
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
+
+	
 
 }
