@@ -1,5 +1,7 @@
 package gioco.astratte;
 
+import java.util.Scanner;
+
 public abstract class AzioniComuni {
 	public void avanti() {
 		System.out.println("avanti");
@@ -19,6 +21,11 @@ public abstract class AzioniComuni {
 
 	public void salta() {
 		System.out.println("salta");
+	}
+	
+	public void scegliPersonaggio(){
+		Scanner scanner = new Scanner(System.in);
+		String nome = scanner.next();
 	}
 
 	

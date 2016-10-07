@@ -41,6 +41,8 @@ public class Goku extends AzioniComuni implements Base {
 	public int attaccoSpeciale() {
 		if( mossaSpeciale == true){
 			danno = danno * 2;
+			energia = 0;
+			mossaSpeciale = false;
 		}
 		System.out.println("Attacco speciale");
 		return danno;
@@ -66,6 +68,8 @@ public class Goku extends AzioniComuni implements Base {
 	public void setHp(int hp) {
 		this.hp = hp;
 	}
+	
+	
 
 	
 
