@@ -9,6 +9,15 @@ public class Vegeta extends AzioniComuni implements Base{
 	int hpInizio;
 	int danno = 50;
 	
+	public Vegeta(int liv, int hp){
+		this.hp = hp;
+		this.liv = liv;
+		this.hpInizio= hp;
+	}
+	
+	
+	
+	
 	@Override
 	public int pugno() {
 		// TODO Auto-generated method stub

@@ -33,7 +33,7 @@ public class Goku extends AzioniComuni implements Base {
 	@Override
 	public void attaccoSpeciale() {
 
-		// TODO Auto-generated method stub
+		
 
 	}
 
