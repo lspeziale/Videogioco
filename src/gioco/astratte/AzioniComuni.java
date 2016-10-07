@@ -2,7 +2,9 @@ package gioco.astratte;
 
 import java.util.Scanner;
 
-public abstract class AzioniComuni {
+import gioco.interfacce.Base;
+
+public abstract class AzioniComuni implements Base{
 	public void avanti() {
 		System.out.println("avanti");
 	}
@@ -23,10 +25,9 @@ public abstract class AzioniComuni {
 		System.out.println("salta");
 	}
 	
-	public void scegliPersonaggio(){
-		Scanner scanner = new Scanner(System.in);
-		String nome = scanner.next();
-	}
+	
+	
+	
 
 	
 	public abstract int attaccoSpeciale();

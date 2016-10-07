@@ -60,8 +60,8 @@ public class Vegeta extends AzioniComuni implements Base {
 
 	}
 
-	private void setHp(int i) {
-		// TODO Auto-generated method stub
+	private void setHp(int hp) {
+		this.hp = hp;
 
 	}
 
