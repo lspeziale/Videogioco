@@ -1,7 +1,5 @@
 package gioco.astratte;
 
-import java.util.Scanner;
-
 import gioco.interfacce.Base;
 
 public abstract class AzioniComuni implements Base{
