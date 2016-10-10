@@ -2,57 +2,67 @@ package gioco;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
-import gioco.astratte.AzioniComuni;
+import gioco.astratte.PersonaggioAstratto;
 import gioco.personaggi.Goku;
 import gioco.personaggi.Vegeta;
 
 public class VideogiocoMain {
 
 	public static void main(String[] args) {
-		ArrayList<Object> listaPersonaggi = new ArrayList<Object>();
-		
-		Goku g1 = new Goku(3, 1000, " Goku ");
-		Vegeta v1 = new Vegeta(1, 190, " Vegeta ");
-		
+		List<PersonaggioAstratto> listaPersonaggi = new ArrayList<PersonaggioAstratto>();
+
+		Goku g1 = new Goku(1, 10000, " Goku ");
+		Vegeta v1 = new Vegeta(1, 10000, " Vegeta ");
+
 		listaPersonaggi.add(g1);
 		listaPersonaggi.add(v1);
-		
-/*		
-		Iterator<AzioniComuni> ite = listaPersonaggi.iterator();
 
-		while (ite.hasNext()) {
-			AzioniComuni lista = (AzioniComuni) ite.next();
-		}
-		*/
-
-		while (g1.getHp() >= 0 || v1.getHp() >= 0) {
-				/*
-				 * 
-				 ciclo(true)
-				 {
-				 	indice= 0 / 1;
-				 	
-				 	arrayList(indice).dannoSubito(ArrayList(!indice).calcio());
-				 	if(arrayList(indice).getHP <= 0)
-				 	{
-				 		Stampa(arrayList(indice).getName() " è MORTO");
-				 		BREAK;
-				 	}
-				 	
-				 	CAMBIA INDICE;
-				 }
-				 
-				 */
+		int playerUno = 0;
+		int playerDue = 1;
+		int attacco=0;
+		int attaccoEstratto;
+		boolean morte;
+		String nomePersonaggio1=listaPersonaggi.get(0).getNome();
+		String nomePersonaggio2=listaPersonaggi.get(1).getNome();
+		int puntiVita1=0;
+		int puntiVita2=0;
+		while (true) {
 			
-			g1.dannoRicevuto(v1.calcio());
-			v1.dannoRicevuto(g1.pugno());
-
-			g1.dannoRicevuto(v1.pugno());
-			v1.dannoRicevuto(g1.calcio());
-
-			g1.dannoRicevuto(g1.attaccoSpeciale());
+			System.out.println("-----------------------------------------");
+			System.out.print("("+listaPersonaggi.get(playerUno).getNome() +" "+listaPersonaggi.get(playerUno).getHp()+" - ");
+			System.out.println(listaPersonaggi.get(playerDue).getNome() +" "+listaPersonaggi.get(playerDue).getHp()+")");
+			attaccoEstratto = (int) (Math.random() * 100);
+			if((attaccoEstratto <50)&&(attaccoEstratto>=0))
+			{
+				attacco = listaPersonaggi.get(playerDue).pugno();
+			}else if((attaccoEstratto <90)&&(attaccoEstratto>=50))
+			{
+				attacco = listaPersonaggi.get(playerDue).calcio();
+			}else if((attaccoEstratto <100)&&(attaccoEstratto>=90))
+			{
+				attacco = listaPersonaggi.get(playerDue).attaccoSpeciale();
+			}
+			morte = listaPersonaggi.get(playerUno).dannoRicevuto(attacco);
+			System.out.print("("+listaPersonaggi.get(playerUno).getNome() +" "+listaPersonaggi.get(playerUno).getHp()+" - ");
+			System.out.println(listaPersonaggi.get(playerDue).getNome() +" "+listaPersonaggi.get(playerDue).getHp()+")");
+			if (morte)
+			{
+				System.exit(0);
+			}else{
+				if(playerUno == 0)
+				{
+					playerUno = 1;
+					playerDue = 0;
+				}else
+				{
+					playerUno = 0;
+					playerDue = 1;
+				}
+			}
+			//System.out.println("-----------------------------------------");
 		}
-
 	}
+
 }
