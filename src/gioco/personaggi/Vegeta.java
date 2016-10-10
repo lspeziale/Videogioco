@@ -12,7 +12,7 @@ public class Vegeta extends PersonaggioAstratto implements Metodi_Combattimento 
 	@Override
 	public int attaccoSpeciale() {
 		if (mossaSpeciale == true) {
-			danno = danno * 20;
+			danno = danno * 5;
 			energia = 0;
 			mossaSpeciale = false;
 		}
