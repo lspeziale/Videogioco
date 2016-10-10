@@ -16,7 +16,7 @@ public class Vegeta extends PersonaggioAstratto implements Metodi_Combattimento 
 			energia = 0;
 			mossaSpeciale = false;
 		}
-		System.out.println("Attacco speciale");
+		System.out.println(nome + " Attacco speciale");
 		return danno;
 
 	}
