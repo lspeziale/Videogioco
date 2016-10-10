@@ -1,30 +1,32 @@
 package gioco.personaggi;
 
-import gioco.astratte.PersonaggioAstratto;
 import gioco.interfacce.Metodi_Combattimento;
+import gioco.astratte.PersonaggioAstratto;
 
-public class Vegeta extends PersonaggioAstratto implements Metodi_Combattimento {
+public class Bu extends PersonaggioAstratto implements Metodi_Combattimento {
 
-	public Vegeta(int liv, int hp, String nome) {
+	public Bu(int liv, int hp, String nome) {
 		super(liv, hp, nome);
 	}
 
 	@Override
 	public int attaccoSpeciale() {
 		if (mossaSpeciale == true) {
-			danno = danno * 20;
+			danno = danno * 2;
 			energia = 0;
 			mossaSpeciale = false;
 		}
-		System.out.println("Attacco speciale");
+		System.out.println(nome + " Attacco speciale");
 		return danno;
-
 	}
 
+	
+	
 	@Override
 
 	public int getHp() {
 		return hp;
 	}
+
 
 }

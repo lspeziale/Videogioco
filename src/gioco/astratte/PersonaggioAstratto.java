@@ -1,8 +1,8 @@
 package gioco.astratte;
 
-import gioco.interfacce.Base;
+import gioco.interfacce.Metodi_Combattimento;
 
-public abstract class PersonaggioAstratto implements Base {
+public abstract class PersonaggioAstratto implements Metodi_Combattimento {
 	protected int liv;
 	protected int hp;
 	protected int hpInizio;
